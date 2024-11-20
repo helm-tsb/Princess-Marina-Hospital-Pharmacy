@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Prescriptions - Pharmacist Portal</title>
+    <link rel="icon" href="images/favicon2.ico" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Use only Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/Marina Logo.png" alt="Princess Marina Hospital Pharmacy Logo" class="logo">
+        </div>
+        <h1>Pharmacist Portal</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pharmacist_portal.html" class="active">Pharmacist Portal</a></li>
+            <li><a href="patient_portal.html">Patient Portal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="dashboard pharmacist-dashboard">
+        <div class="dashboard-header">
+            <div class="header-title">
+                <h2>Manage Prescriptions</h2>
+            </div>
+            <div class="header-description">
+                <p>Review, update, and process patient prescriptions efficiently.</p>
+            </div>
+        </div>
+        <!-- Prescription Management Features -->
+        <div class="prescription-management">
+            <!-- Example Content: Table of Prescriptions -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prescription ID</th>
+                        <th>Patient ID</th>
+                        <th>Patient Name</th>
+                        <th>Pharmacist</th>
+                        <th>Medication</th>
+                        <th>Dosage</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Existing Rows -->
+                    <tr>
+                        <td>RX12345</td>
+                        <td>PT001</td>
+                        <td>John Doe</td>
+                        <td>Sarah Williams</td>
+                        <td>Amoxicillin</td>
+                        <td>500mg</td>
+                        <td>Pending</td>
+                        <td>
+                            <a href="edit_prescription.html?rx_id=RX12345" class="action-btn"><i class="fas fa-edit"></i> Edit</a>
+                            <a href="approve_prescription.html?rx_id=RX12345" class="action-btn"><i class="fas fa-check"></i> Approve</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RX12346</td>
+                        <td>PT002</td>
+                        <td>Jane Smith</td>
+                        <td>David Lee</td>
+                        <td>Ibuprofen</td>
+                        <td>400mg</td>
+                        <td>Approved</td>
+                        <td>
+                            <a href="edit_prescription.html?rx_id=RX12346" class="action-btn"><i class="fas fa-edit"></i> Edit</a>
+                            <a href="approve_prescription.html?rx_id=RX12346" class="action-btn"><i class="fas fa-check"></i> Approve</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RX12347</td>
+                        <td>PT003</td>
+                        <td>Emily Johnson</td>
+                        <td>Michael Brown</td>
+                        <td>Metformin</td>
+                        <td>1000mg</td>
+                        <td>Pending</td>
+                        <td>
+                            <a href="edit_prescription.html?rx_id=RX12347" class="action-btn"><i class="fas fa-edit"></i> Edit</a>
+                            <a href="approve_prescription.html?rx_id=RX12347" class="action-btn"><i class="fas fa-check"></i> Approve</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RX12348</td>
+                        <td>PT004</td>
+                        <td>Michael Brown</td>
+                        <td>Alice Green</td>
+                        <td>Lisinopril</td>
+                        <td>10mg</td>
+                        <td>Approved</td>
+                        <td>
+                            <a href="edit_prescription.html?rx_id=RX12348" class="action-btn"><i class="fas fa-edit"></i> Edit</a>
+                            <a href="approve_prescription.html?rx_id=RX12348" class="action-btn"><i class="fas fa-check"></i> Approve</a>
+                        </td>
+                    </tr>
+                    <!-- New Rows -->
+                    <tr>
+                        <td>RX12349</td>
+                        <td>PT005</td>
+                        <td>Robert Wilson</td>
+                        <td>Linda Martinez</td>
+                        <td>Atorvastatin</td>
+                        <td>20mg</td>
+                        <td>Pending</td>
+                        <td>
+                            <a href="edit_prescription.html?rx_id=RX12349" class="action-btn"><i class="fas fa-edit"></i> Edit</a>
+                            <a href="approve_prescription.html?rx_id=RX12349" class="action-btn"><i class="fas fa-check"></i> Approve</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RX12350</td>
+                        <td>PT006</td>
+                        <td>Linda Thompson</td>
+                        <td>James Anderson</td>
+                        <td>Amoxicillin</td>
+                        <td>500mg</td>
+                        <td>Approved</td>
+                        <td>
+                            <a href="edit_prescription.html?rx_id=RX12350" class="action-btn"><i class="fas fa-edit"></i> Edit</a>
+                            <a href="approve_prescription.html?rx_id=RX12350" class="action-btn"><i class="fas fa-check"></i> Approve</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RX12351</td>
+                        <td>PT007</td>
+                        <td>Barbara Davis</td>
+                        <td>Thomas Clark</td>
+                        <td>Ibuprofen</td>
+                        <td>400mg</td>
+                        <td>Pending</td>
+                        <td>
+                            <a href="edit_prescription.html?rx_id=RX12351" class="action-btn"><i class="fas fa-edit"></i> Edit</a>
+                            <a href="approve_prescription.html?rx_id=RX12351" class="action-btn"><i class="fas fa-check"></i> Approve</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>We provide high-quality pharmaceutical services at Princess Marina Hospital. Our mission is to ensure safe and accessible medication for all patients.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Princess Marina Hospital, Gaborone, Botswana</p>
+                <p>Phone: +267 123 4567</p>
+                <p>Email: <a href="mailto:info@pharmacy.com">info@pharmacy.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Princess Marina Hospital Pharmacy. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

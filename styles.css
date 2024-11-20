@@ -1,0 +1,1265 @@
+/* General Styles */
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #00796B;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --white: #ffffff;
+    --accent-color: #FFD700;
+    --transition: all 0.3s ease;
+    --dashboard-bg: #f0f0f0;
+    --card-bg: #ffffff;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    --primary-dark-color: #5a2d0c; /* Example dark shade */
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    background-image: url('images/bg9.avif'); /* Add your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--white);
+    padding: 5px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Logo Container */
+header .logo-container {
+    /*background-color: rgba(255, 255, 255, 0.8); *//* Semi-transparent background for visibility */
+    padding: 10px;
+    border-radius: 50%; /* Keeps the circular appearance */
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    /*margin-left: 30px; *//* Add margin to push it further to the right */
+}
+
+header .logo {
+    width: 120px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+header .logo:hover {
+    transform: scale(1.05);
+}
+
+/* Header h1 */
+header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 200; /* Ensures the text is above the background */
+}
+
+
+/* Navigation */
+nav {
+    background: var(--primary-color);
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Content */
+.main-content { /* Assuming you have a class for main content */
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--white);
+    margin-top: -50px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+}
+
+.main-content h2 {
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+}
+
+.main-content p {
+    font-size: 1.3rem;
+    margin: 20px auto;
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+.quick-links a {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 15px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 30px;
+    transition: var(--transition);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.quick-links a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Homepage Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/bg5.avif");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+/* Featured Services Section */
+.featured-services {
+    background-image: url("images/bg10.jpg"); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--white); /* Change text color for better contrast */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+}
+
+.featured-services h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold; /* This makes the h2 bold */
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    color: var(--white); /* Change to white for visibility */
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service p {
+    color: var(--white); /* Change to white for visibility */
+    font-size: 1rem;
+}
+
+/* Team Section */
+.team {
+    background-color: var(--white);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.team h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.team p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* About Us Page Styles */
+.about-page {
+    background-image: url("images/bg17.avif"); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    color: var(--white); /* Change text color if necessary */
+}
+
+.about-page .about-intro,
+.about-page .mission,
+.about-page .vision,
+.about-page .team-overview,
+.about-page .hours {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 30px 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-page .about-intro h2,
+.about-page .mission h2,
+.about-page .vision h2,
+.about-page .team-overview h2,
+.about-page .hours h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-page .about-intro p,
+.about-page .mission p,
+.about-page .vision p,
+.about-page .team-overview p,
+.about-page .hours p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Page Styles */
+.services-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.services-intro h2 {
+    color: var(--primary-color); /* Use your primary color variable */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services-intro p {
+    font-size: 1.2rem;
+    color: var(--text-color); /* Use your text color variable */
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: var(--white); /* Use your white color variable */
+    border-radius: 10px;
+    box-shadow: var(--card-shadow); /* Use your card shadow variable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.service-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color); /* Use your secondary color variable */
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: var(--text-color); /* Use your text color variable */
+    line-height: 1.6;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow); /* Add hover shadow variable */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .services-intro h2 {
+        font-size: 2rem;
+    }
+
+    .services-intro p {
+        font-size: 1rem;
+    }
+
+    /* Adjust dashboard grid */
+    .dashboard-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Dashboard Styles */
+.dashboard {
+    background-color: var(--dashboard-bg);
+    padding: 40px 20px;
+    min-height: calc(100vh - 200px);
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--card-shadow);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.dashboard-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.dashboard-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.dashboard-card p {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.dashboard-card a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--transition);
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-card a:hover {
+    background-color: var(--secondary-color);
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-2px);
+}
+
+.dashboard-card a:active {
+    background-color: var(--primary-dark-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+.dashboard-card a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.6s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+}
+
+.dashboard-card a:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.dashboard-card a span {
+    vertical-align: middle; /* Align text with icon if any */
+}
+
+/* Pharmacist Dashboard Specific Styles */
+.pharmacist-dashboard .dashboard-card {
+    border-left: 5px solid var(--primary-color);
+}
+
+/* Patient Dashboard Specific Styles */
+.patient-dashboard .dashboard-card {
+    border-left: 5px solid var(--secondary-color);
+}
+
+/* Contact Page Styles */
+.contact-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.contact-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-hero h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-details, .contact-form {
+    flex: 1;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.contact-details h3, .contact-form h3 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-details i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-details a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-details a:hover {
+    color: var(--primary-color);
+}
+
+.map-container {
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    width: 100%; /* Ensure iframe is responsive */
+    height: 300px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.social-links a {
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: var(--white);
+    padding: 40px 20px;
+    margin-top: 60px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    max-width: 250px;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 0.9rem;
+    color: var(--white);
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover:nth-child(1) {
+    color: #3b5998; /* Facebook */
+}
+
+.social-icons a:hover:nth-child(2) {
+    color: #1da1f2; /* Twitter */
+}
+
+.social-icons a:hover:nth-child(3) {
+    color: #e1306c; /* Instagram */
+}
+
+.social-icons a:hover:nth-child(4) {
+    color: #0077b5; /* LinkedIn */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background: #222;
+    color: var(--white);
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-section {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+/* General Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    min-width: 600px;
+}
+
+table thead tr {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: left;
+    font-weight: bold;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Pharmacist Portal Pages*/
+/* Action Buttons within Tables */
+.action-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-right: 5px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color var(--transition);
+}
+
+.action-btn i {
+    margin-right: 5px;
+}
+
+.action-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px 12px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    transition: border-color var(--transition);
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: var(--primary-color);
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.search-bar button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Charts Container Styles */
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.chart-item {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    height: 400px; /* Fixed height for charts */
+    position: relative;
+}
+
+.chart-item h3 {
+    text-align: center;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    color: var(--secondary-color);
+}
+
+/* Responsive Adjustments for Tables and Charts */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+    }
+
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-item {
+        height: 300px;
+    }
+}
+
+
+/* Registration Page Styles */
+.registration-page {
+    padding: 40px 20px;
+    background-color: var(--background-color);
+}
+
+.registration-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.registration-container h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.registration-form .form-group {
+    margin-bottom: 20px;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color var(--transition);
+}
+
+.registration-form input:focus,
+.registration-form select:focus,
+.registration-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.registration-form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn i {
+    margin-right: 8px;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    background-color: var(--primary-dark-color);
+    transform: translateY(0);
+}
+
+
+
+/* Upload Prescription Page Styles */
+.upload-prescription-page {
+    padding: 40px 20px;
+    background-color: var(--background-color);
+}
+
+.upload-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.upload-container h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-form .form-group {
+    margin-bottom: 20px;
+}
+
+.upload-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.upload-form input[type="text"],
+.upload-form input[type="file"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color var(--transition);
+}
+
+.upload-form input[type="text"]:focus,
+.upload-form input[type="file"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn i {
+    margin-right: 8px;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    background-color: var(--primary-dark-color);
+    transform: translateY(0);
+}
+
+
+/* View Medications Page Styles */
+.view-medications-page {
+    padding: 40px 20px;
+    background-color: var(--background-color);
+}
+
+.medications-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.medications-container h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.medications-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.medications-container table thead tr {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: left;
+    font-weight: bold;
+}
+
+.medications-container table th,
+.medications-container table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.medications-container table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.medications-container table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Action Buttons within Tables */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    margin-right: 5px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.action-btn i {
+    margin-right: 5px;
+}
+
+.action-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Specific Button Styles (Optional for Different Actions) */
+.view-btn {
+    background-color: #17a2b8; /* Teal */
+}
+
+.view-btn:hover {
+    background-color: #138496;
+}
+
+.edit-btn {
+    background-color: #ffc107; /* Amber */
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+
+
+/* Delivery Option Page Styles */
+.delivery-option-page {
+    padding: 40px 20px;
+    background-color: var(--background-color);
+}
+
+.delivery-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.delivery-container h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.delivery-form .form-group {
+    margin-bottom: 20px;
+}
+
+.delivery-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.delivery-form input[type="text"],
+.delivery-form input[type="tel"],
+.delivery-form input[type="email"],
+.delivery-form select,
+.delivery-form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color var(--transition);
+}
+
+.delivery-form input[type="text"]:focus,
+.delivery-form input[type="tel"]:focus,
+.delivery-form input[type="email"]:focus,
+.delivery-form select:focus,
+.delivery-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.delivery-form textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.delivery-form small {
+    display: block;
+    margin-top: 5px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn i {
+    margin-right: 8px;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    background-color: var(--primary-dark-color);
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .delivery-container {
+        padding: 20px;
+    }
+
+    .delivery-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+    }
+}
